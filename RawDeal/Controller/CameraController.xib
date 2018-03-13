@@ -25,10 +25,13 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qp5-mP-bew" customClass="VideoPreviewView" customModule="RawDeal" customModuleProvider="target">
                     <rect key="frame" x="8" y="28" width="359" height="631"/>
                     <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gdp-BQ-Cul">
-                            <rect key="frame" x="52" y="571" width="255" height="30"/>
-                            <color key="backgroundColor" red="0.0" green="0.72543103450000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                            <state key="normal" title="Snap!">
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gdp-BQ-Cul">
+                            <rect key="frame" x="155" y="576" width="50" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="50" id="B30-mg-tbC"/>
+                                <constraint firstAttribute="height" constant="50" id="Nm8-2P-9ZN"/>
+                            </constraints>
+                            <state key="normal" title="Snap!" image="shutter.png">
                                 <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </state>
                             <connections>
@@ -38,9 +41,8 @@
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstAttribute="bottom" secondItem="Gdp-BQ-Cul" secondAttribute="bottom" constant="30" id="1WE-Sn-Zxp"/>
-                        <constraint firstAttribute="trailing" secondItem="Gdp-BQ-Cul" secondAttribute="trailing" constant="52" id="QfB-xr-3tR"/>
-                        <constraint firstItem="Gdp-BQ-Cul" firstAttribute="leading" secondItem="qp5-mP-bew" secondAttribute="leading" constant="52" id="m8g-NI-ZDt"/>
+                        <constraint firstAttribute="bottom" secondItem="Gdp-BQ-Cul" secondAttribute="bottom" constant="5" id="1WE-Sn-Zxp"/>
+                        <constraint firstItem="Gdp-BQ-Cul" firstAttribute="centerX" secondItem="qp5-mP-bew" secondAttribute="centerX" id="MgL-Qy-hk1"/>
                     </constraints>
                 </view>
             </subviews>
@@ -55,4 +57,7 @@
             <point key="canvasLocation" x="34.5" y="53.5"/>
         </view>
     </objects>
+    <resources>
+        <image name="shutter.png" width="784" height="784"/>
+    </resources>
 </document>

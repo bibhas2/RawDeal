@@ -164,7 +164,6 @@ class CameraController: UIViewController, AVCapturePhotoCaptureDelegate {
             completionHandler(false)
         }
     }
-
     
     func createPhotoSettings() -> AVCapturePhotoSettings {
         let photoSettings = AVCapturePhotoSettings(rawPixelFormatType: self.capturePhotoOutput.availableRawPhotoPixelFormatTypes.first!)
@@ -174,7 +173,7 @@ class CameraController: UIViewController, AVCapturePhotoCaptureDelegate {
         photoSettings.flashMode = .auto
         
         let desiredPreviewPixelFormat = NSNumber(value: kCVPixelFormatType_32BGRA)
-        if photoSettings.availablePreviewPhotoPixelFormatTypes.contains(OSType(desiredPreviewPixelFormat)) {
+        if photoSettings.availablePreviewPhotoPixelFormatTypes.contains(OSType(truncating: desiredPreviewPixelFormat)) {
             photoSettings.previewPhotoFormat = [
                 kCVPixelBufferPixelFormatTypeKey as String : desiredPreviewPixelFormat,
                 kCVPixelBufferWidthKey as String : NSNumber(value: 512),
