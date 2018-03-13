@@ -12,6 +12,9 @@
 		A3DCAE4E20574A87001887CC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3DCAE4C20574A87001887CC /* Main.storyboard */; };
 		A3DCAE5020574A87001887CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A3DCAE4F20574A87001887CC /* Assets.xcassets */; };
 		A3DCAE5320574A87001887CC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3DCAE5120574A87001887CC /* LaunchScreen.storyboard */; };
+		A3DCAE5D20574E2C001887CC /* CameraController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3DCAE5B20574E2C001887CC /* CameraController.swift */; };
+		A3DCAE5E20574E2C001887CC /* CameraController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3DCAE5C20574E2C001887CC /* CameraController.xib */; };
+		A3DCAE6120575403001887CC /* VideoPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3DCAE6020575403001887CC /* VideoPreviewView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,9 @@
 		A3DCAE4F20574A87001887CC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A3DCAE5220574A87001887CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A3DCAE5420574A87001887CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A3DCAE5B20574E2C001887CC /* CameraController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraController.swift; sourceTree = "<group>"; };
+		A3DCAE5C20574E2C001887CC /* CameraController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CameraController.xib; sourceTree = "<group>"; };
+		A3DCAE6020575403001887CC /* VideoPreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPreviewView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +60,8 @@
 		A3DCAE4720574A87001887CC /* RawDeal */ = {
 			isa = PBXGroup;
 			children = (
+				A3DCAE5F205753EB001887CC /* View */,
+				A3DCAE5A20574E15001887CC /* Controller */,
 				A3DCAE4820574A87001887CC /* AppDelegate.swift */,
 				A3DCAE4A20574A87001887CC /* ViewController.swift */,
 				A3DCAE4C20574A87001887CC /* Main.storyboard */,
@@ -62,6 +70,23 @@
 				A3DCAE5420574A87001887CC /* Info.plist */,
 			);
 			path = RawDeal;
+			sourceTree = "<group>";
+		};
+		A3DCAE5A20574E15001887CC /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A3DCAE5B20574E2C001887CC /* CameraController.swift */,
+				A3DCAE5C20574E2C001887CC /* CameraController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		A3DCAE5F205753EB001887CC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A3DCAE6020575403001887CC /* VideoPreviewView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,6 +150,7 @@
 			files = (
 				A3DCAE5320574A87001887CC /* LaunchScreen.storyboard in Resources */,
 				A3DCAE5020574A87001887CC /* Assets.xcassets in Resources */,
+				A3DCAE5E20574E2C001887CC /* CameraController.xib in Resources */,
 				A3DCAE4E20574A87001887CC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -136,6 +162,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A3DCAE5D20574E2C001887CC /* CameraController.swift in Sources */,
+				A3DCAE6120575403001887CC /* VideoPreviewView.swift in Sources */,
 				A3DCAE4B20574A87001887CC /* ViewController.swift in Sources */,
 				A3DCAE4920574A87001887CC /* AppDelegate.swift in Sources */,
 			);
@@ -275,7 +303,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = VKA32KW96N;
+				DEVELOPMENT_TEAM = V6FT8G2R89;
 				INFOPLIST_FILE = RawDeal/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mobiarch.RawDeal;
@@ -290,7 +318,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = VKA32KW96N;
+				DEVELOPMENT_TEAM = V6FT8G2R89;
 				INFOPLIST_FILE = RawDeal/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mobiarch.RawDeal;
