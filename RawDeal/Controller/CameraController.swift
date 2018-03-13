@@ -192,7 +192,8 @@ class CameraController: UIViewController, AVCapturePhotoCaptureDelegate {
                  bracketSettings: AVCaptureBracketedStillImageSettings?,
                  error: Error?) {
         guard error == nil, let rawSampleBuffer = rawSampleBuffer else {
-            print("Error capturing RAW photo:\(error)")
+            NSLog("Error capturing RAW photo: %@", String(describing: error))
+            
             return
         }
         
@@ -204,7 +205,8 @@ class CameraController: UIViewController, AVCapturePhotoCaptureDelegate {
                      didFinishCaptureFor resolvedSettings: AVCaptureResolvedPhotoSettings,
                      error: Error?) {
         guard error == nil else {
-            print("Error in capture process: \(error)")
+            NSLog("Error in capture process: %@", String(describing: error))
+            
             return
         }
         
@@ -212,9 +214,9 @@ class CameraController: UIViewController, AVCapturePhotoCaptureDelegate {
             
             self.saveRAWPlusJPEGPhotoLibrary { success, error in
                 if success {
-                    print("Added RAW+JPEG photo to library.")
+                    NSLog("Added RAW+JPEG photo to library.")
                 } else {
-                    print("Error adding RAW+JPEG photo to library: \(error)")
+                    NSLog("Error adding RAW+JPEG photo to library: %@", String(describing: error))
                 }
                 
                 self.rawPreviewPhotoSampleBuffer = nil
@@ -233,23 +235,13 @@ class CameraController: UIViewController, AVCapturePhotoCaptureDelegate {
                 return
             }
             
-            /*
-            guard let jpegData = AVCapturePhotoOutput.jpegPhotoDataRepresentation(
-                forJPEGSampleBuffer: photoSampleBuffer,
-                previewPhotoSampleBuffer: previewSampleBuffer)
-                else {
-                    print("Unable to create JPEG data.")
-                    completionHandler?(false, nil)
-                    return
-            }
-            */
-            
             guard let dngData = AVCapturePhotoOutput.dngPhotoDataRepresentation(
                 forRawSampleBuffer: self.rawSampleBuffer!,
                 previewPhotoSampleBuffer: self.rawPreviewPhotoSampleBuffer!)
                 else {
-                    print("Unable to create DNG data.")
+                    NSLog("Unable to create DNG data.")
                     completionHandler?(false, nil)
+                    
                     return
             }
             
@@ -258,16 +250,18 @@ class CameraController: UIViewController, AVCapturePhotoCaptureDelegate {
             do {
                 try dngData.write(to: dngFileURL, options: [])
             } catch let error as NSError {
-                print("Unable to write DNG file.")
+                NSLog("Unable to write DNG file.")
                 completionHandler?(false, error)
+                
                 return
             }
             
             PHPhotoLibrary.shared().performChanges( {
                 let creationRequest = PHAssetCreationRequest.forAsset()
                 let creationOptions = PHAssetResourceCreationOptions()
+                
                 creationOptions.shouldMoveFile = true
-                //creationRequest.addResource(with: .photo, data: jpegData, options: nil)
+                
                 creationRequest.addResource(with: .photo, fileURL: dngFileURL, options: creationOptions)
             }, completionHandler: completionHandler)
         })
