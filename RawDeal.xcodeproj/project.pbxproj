@@ -13,6 +13,7 @@
 		A3DCAE5D20574E2C001887CC /* CameraController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3DCAE5B20574E2C001887CC /* CameraController.swift */; };
 		A3DCAE5E20574E2C001887CC /* CameraController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3DCAE5C20574E2C001887CC /* CameraController.xib */; };
 		A3DCAE6120575403001887CC /* VideoPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3DCAE6020575403001887CC /* VideoPreviewView.swift */; };
+		A3DCAE6C20582226001887CC /* shutter.png in Resources */ = {isa = PBXBuildFile; fileRef = A3DCAE6B20582226001887CC /* shutter.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		A3DCAE5B20574E2C001887CC /* CameraController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraController.swift; sourceTree = "<group>"; };
 		A3DCAE5C20574E2C001887CC /* CameraController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CameraController.xib; sourceTree = "<group>"; };
 		A3DCAE6020575403001887CC /* VideoPreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPreviewView.swift; sourceTree = "<group>"; };
+		A3DCAE6B20582226001887CC /* shutter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shutter.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 		A3DCAE4720574A87001887CC /* RawDeal */ = {
 			isa = PBXGroup;
 			children = (
+				A3DCAE6920582211001887CC /* Resource */,
 				A3DCAE5F205753EB001887CC /* View */,
 				A3DCAE5A20574E15001887CC /* Controller */,
 				A3DCAE4820574A87001887CC /* AppDelegate.swift */,
@@ -81,6 +84,22 @@
 				A3DCAE6020575403001887CC /* VideoPreviewView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		A3DCAE6920582211001887CC /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				A3DCAE6A2058221C001887CC /* Image */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		A3DCAE6A2058221C001887CC /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				A3DCAE6B20582226001887CC /* shutter.png */,
+			);
+			path = Image;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,6 +162,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A3DCAE5320574A87001887CC /* LaunchScreen.storyboard in Resources */,
+				A3DCAE6C20582226001887CC /* shutter.png in Resources */,
 				A3DCAE5020574A87001887CC /* Assets.xcassets in Resources */,
 				A3DCAE5E20574E2C001887CC /* CameraController.xib in Resources */,
 			);
